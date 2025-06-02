@@ -10,6 +10,7 @@ Write a C program to read 3 characters one by one and print the characters in a 
 4.	End the program.
 
 
+
 ## PROGRAM:
 ```
 #include <stdio.h>
@@ -32,23 +33,36 @@ Thus the program to read 3 characters one by one and print the characters in a r
 # EX-02- Conditional-Statements
 ## AIM:
 Write a C program to read A values and check whether A is positive number or not.
+
 # ALGORITHM:
-1.Declare a variable to store the input value A.
-2.Use the scanf function to read the value of A from the user.
-3.Check if the value of A is greater than zero.
-4.If A is greater than zero, print a message indicating that it's a positive number.
-5.Otherwise, print a message indicating that it's not a positive number. 
-6.End the program.
+1.	Declare a variable to store the input value A.
+2.	Use the scanf function to read the value of A from the user.
+3.	Check if the value of A is greater than zero.
+4.	If A is greater than zero, print a message indicating that it's a positive number. 
+5.	Otherwise, print a message indicating that it's not a positive number.
+6.End the program
 
 
 # PROGRAM
 ```
-
-
-
+#include <stdio.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    if (a>=0)
+    {
+        printf("Number is positive.");
+    }
+    else
+    {
+        printf("Number is negative.");
+    }
+    return 0;
+}
 ```
 # OUTPUT:
-
+![Screenshot 2025-04-27 142733](https://github.com/user-attachments/assets/a00aff32-3480-4e9f-b78e-0db712da6346)
 
 # RESULT:
 Thus the program to read A values and check whether A is positive number or not has been executed successfully.
@@ -60,13 +74,14 @@ Thus the program to read A values and check whether A is positive number or not 
 Write a program to find minimum between two fraction numbers using conditional operator or ternary operator.
 
 ## ALGORITHM:
-1.Declare variables to store the two fraction numbers and the result.
-2.Use the printf function to prompt the user to enter the first fraction number (numerator and denominator separately).
-3.Use the scanf function to read the numerator and denominator of the first fraction.
-4.Repeat steps 2 and 3 to get the second fraction from the user.
-5.Calculate the decimal values of both fractions by dividing the numerators by the denominators.
-6.Use the conditional (ternary) operator to compare the decimal values and store the minimum value in the result variable.
-7.Print the minimum value.
+1.	Declare variables to store the two fraction numbers and the result.
+2.	Use the printf function to prompt the user to enter the first fraction number (numerator and denominator separately).
+3.	Use the scanf function to read the numerator and denominator of the first fraction.
+4.	Repeat steps 2 and 3 to get the second fraction from the user.
+5.	Calculate the decimal values of both fractions by dividing the numerators by the denominators.
+6.	Use the conditional (ternary) operator to compare the decimal values and store the minimum value in the result variable.
+7.	Print the minimum value.
+
 
 ## PROGRAM:
 ```
@@ -87,31 +102,30 @@ Write a C program to check whether the input value is equal to 1 using simple if
 ## ALGORITHM:
 1.	Declare a variable to store the input value.
 2.	Use the scanf function to read the input value from the user.
-3.	Use an if statement to check if the input value is equal to 0.
-4.	If the condition in the if statement is true, print a message 'False'.
-5.	Otherwise, print a message "  ".
+3.	Use an if statement to check if the input value is equal to 1.
+4.	If the condition in the if statement is true, print a message indicating that the input value is equal to 1.
+5.	Otherwise, print a message indicating that it's not equal to 1.
 6.	End the program.
+
 
 
 ## PROGRAM:
 ```
-# include<stdio.h>
-   int main()
-{   int a;
-   scanf("%d",&a);
-   if(a==0)
-   printf("FALSE");
-   else
-   printf("  ");
-   return 0;
-}
+#include <stdio.h>
+int main(){
+    int a;
+    scanf("%d",&a);
+    if(a==1)
+       printf("TRUE");
+       
+
 ```
 
 ## OUTPUT:
-![Screenshot 2025-04-29 070135](https://github.com/user-attachments/assets/d8acbf10-378a-4407-adaa-52286eea51de)
+![Screenshot 2025-04-27 143112](https://github.com/user-attachments/assets/867976e1-6394-489a-838b-63abfd58b086)
 
 ## RESULT:
-Thus the program to check whether the input value is equal to 1 using simple if statement has been executed successfully
+Thus the program to check whether the input value is equal to 1 using simple if statement has been executed successfully.
 
 
 
@@ -119,7 +133,6 @@ Thus the program to check whether the input value is equal to 1 using simple if 
 ## AIM:
 To write a C program that reads marks of three subjects, calculates the total and percentage, and then determines the division (First, Second, Pass, or Fail) based on the percentage and minimum marks criteria.
 ## ALGORITHM:
-```
 1.	Start
 2.	Declare integer variables m1, m2, m3 for marks, and float variables tot, per.
 3.	Input the marks for three subjects.
@@ -133,15 +146,40 @@ b.	Else if percentage >= 48: Print “Division = Second”
 c.	Else if percentage >= 36: Print “Division = Pass”
 9.	Else: Print “Division = Fail”
 10.	End
-```
 ## PROGRAM:
 ```
+#include <stdio.h>
+#include <string.h>
 
+int main()
+{
+    int phy,che,ca,total;
+    float per;
+    char div[10];
+
+   
+    scanf("%d%d%d",&phy,&che,&ca);
+    total = phy+che+ca;
+    per = total/3.0;
+    if (per>=60)
+	 strcpy(div,"First");
+    else if (per<60&&per>=48)
+	    strcpy(div,"Second");
+	else
+	    if (per<48&&per>=36)
+		strcpy(div,"Pass");
+	     else
+		strcpy(div,"Fail");
+  
+       printf("Total Marks = %d\nPercentage = %5.2f\nDivision = %s\n",total,per,div);
+       return 0;
 }
+
+
 ```
 
 ## OUTPUT:
-
+![WhatsApp Image 2025-04-27 at 14 15 29_8c2cc000](https://github.com/user-attachments/assets/bffe07be-732e-4fc7-bb19-9a8995aa59ad)
 
 
 ## RESULT:
