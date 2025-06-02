@@ -165,37 +165,40 @@ c.	Else if percentage >= 36: Print “Division = Pass”
 ## PROGRAM:
 ```
 #include <stdio.h>
-#include <string.h>
 
-int main()
-{
-    int phy,che,ca,total;
-    float per;
-    char div[10];
-
-   
-    scanf("%d%d%d",&phy,&che,&ca);
-    total = phy+che+ca;
-    per = total/3.0;
-    if (per>=60)
-	 strcpy(div,"First");
-    else if (per<60&&per>=48)
-	    strcpy(div,"Second");
-	else
-	    if (per<48&&per>=36)
-		strcpy(div,"Pass");
-	     else
-		strcpy(div,"Fail");
-  
-       printf("Total Marks = %d\nPercentage = %5.2f\nDivision = %s\n",total,per,div);
-       return 0;
+int main() {
+    int m1, m2, m3;
+    float tot, per;
+    
+    scanf("%d %d %d", &m1, &m2, &m3);
+    
+    tot = m1 + m2 + m3;
+    per = tot / 3;
+    
+    printf("Total = %.0f\n", tot);
+    printf("Percentage = %.2f\n", per);
+    
+    if (m1 >= 40 && m2 >= 40 && m3 >= 40) {
+        if (per >= 60) {
+            printf("Division = First\n");
+        } else if (per >= 48) {
+            printf("Division = Second\n");
+        } else if (per >= 36) {
+            printf("Division = Pass\n");
+        }
+    } else {
+        printf("Division = Fail\n");
+    }
+    
+    return 0;
 }
 
 
 ```
 
 ## OUTPUT:
-![WhatsApp Image 2025-04-27 at 14 15 29_8c2cc000](https://github.com/user-attachments/assets/bffe07be-732e-4fc7-bb19-9a8995aa59ad)
+![image](https://github.com/user-attachments/assets/d7b94fc8-a465-4028-b5fe-10288ccd89dc)
+
 
 
 ## RESULT:
